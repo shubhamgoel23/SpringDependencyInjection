@@ -6,7 +6,7 @@ public class ConstructorInjectedController {
 
     private GreetingService greetingService;
 
-    private ConstructorInjectedController(GreetingService greetingService) {
+    public ConstructorInjectedController(GreetingService greetingService) {
         this.greetingService = greetingService;
     }
 
