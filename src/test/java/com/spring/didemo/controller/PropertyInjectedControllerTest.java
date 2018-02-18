@@ -11,7 +11,7 @@ public class PropertyInjectedControllerTest {
     @org.testng.annotations.BeforeMethod
     public void setUp(){
         this.propertyInjectedController = new PropertyInjectedController();
-        this.propertyInjectedController.greetingService = new GreetingServiceImpl();
+        this.propertyInjectedController.greetingServiceImpl = new GreetingServiceImpl();
     }
 
     @org.testng.annotations.Test
