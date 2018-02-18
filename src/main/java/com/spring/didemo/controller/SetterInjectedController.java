@@ -1,0 +1,16 @@
+package com.spring.didemo.controller;
+
+import com.spring.didemo.services.GreetingService;
+
+public class SetterInjectedController {
+
+    private GreetingService greetingService;
+
+    public String sayHello() {
+        return greetingService.sayGreeting();
+    }
+
+    public void setGreetingService(GreetingService greetingService) {
+        this.greetingService = greetingService;
+    }
+}
