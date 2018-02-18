@@ -1,12 +1,17 @@
 package com.spring.didemo.controller;
 
 import com.spring.didemo.services.GreetingServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.*;
 
-public class SetterInjectedControllerTest {
+
+public class SetterInjectedControllerTest{
+
+
+    @Autowired
     private SetterInjectedController setterInjectedController;
 
     @BeforeMethod

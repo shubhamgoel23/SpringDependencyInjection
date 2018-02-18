@@ -4,8 +4,8 @@ import com.spring.didemo.services.GreetingServiceImpl;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class ConstructorInjectedControllerTest {
 
+class ConstructorInjectedControllerTest {
     private ConstructorInjectedController constructorInjectedController;
 
     @org.junit.jupiter.api.BeforeEach
