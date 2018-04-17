@@ -2,11 +2,13 @@ package com.spring.didemo.services;
 
 import org.springframework.stereotype.Service;
 
+/**
+ * Created by jt on 5/24/17.
+ */
 @Service
 public class ConstructorGreetingService implements GreetingService {
-
     @Override
     public String sayGreeting() {
-        return "hello! i was injected via constructor";
+        return "Hello - I was injected via the constructor!!!";
     }
 }

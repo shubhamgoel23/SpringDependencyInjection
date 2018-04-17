@@ -1,21 +1,22 @@
 package com.spring.didemo.controller;
 
 import com.spring.didemo.services.GreetingService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
+/**
+ * Created by jt on 5/24/17.
+ */
 @Controller
 public class ConstructorInjectedController {
 
     private GreetingService greetingService;
 
-    @Autowired //not required as After spring 4.2 they enabled automatic wiring of constructor based components.
     public ConstructorInjectedController(@Qualifier("constructorGreetingService") GreetingService greetingService) {
         this.greetingService = greetingService;
     }
 
-    public String sayHello(){
+    public String sayHello() {
         return greetingService.sayGreeting();
     }
 }
