@@ -1,9 +1,12 @@
-datasource:
-  username: zaqwsx
-  password: hdjhdjs
-  url: hsdfhjk
-
 org:
   username: shubham
   password: pass
   url: hsjdhskj
+
+--- #file separator
+
+spring:
+    profiles: de
+
+org:
+  username: shubham in german yml config
