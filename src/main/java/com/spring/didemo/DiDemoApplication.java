@@ -4,6 +4,7 @@ import com.spring.didemo.controller.ConstructorInjectedController;
 import com.spring.didemo.controller.MyController;
 import com.spring.didemo.controller.PropertyInjectedController;
 import com.spring.didemo.controller.SetterInjectedController;
+import com.spring.didemo.model.DatasourceBroker;
 import com.spring.didemo.model.FakeDatasource;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -19,7 +20,10 @@ public class DiDemoApplication {
 
         FakeDatasource fakeDatasource = (FakeDatasource) ctx.getBean(FakeDatasource.class);
 
+        DatasourceBroker datasourceBroker = (DatasourceBroker) ctx.getBean(DatasourceBroker.class);
+
         System.out.println(fakeDatasource.getUser());
+        System.out.println(datasourceBroker.getUser());
         System.out.println(controller.hello());
 
 //        System.out.println(ctx.getBean(PropertyInjectedController.class).sayHello());
