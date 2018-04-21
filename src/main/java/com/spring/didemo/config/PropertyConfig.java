@@ -13,14 +13,14 @@ import org.springframework.core.env.Environment;
 
 @Configuration
 //@PropertySource({"classpath:datasource.properties","classpath:org.properties"})
-@PropertySources({
-        @PropertySource("classpath:datasource.properties"),
-        @PropertySource("classpath:org.properties")
-})
+//@PropertySources({
+//        @PropertySource("classpath:datasource.properties"),
+//        @PropertySource("classpath:org.properties")
+//})
 public class PropertyConfig {
-
-    @Autowired
-    Environment env;
+//
+//    @Autowired
+//    Environment env;
 
     @Value("${org.username}") // spring expression lang
     String user;
@@ -58,10 +58,10 @@ public class PropertyConfig {
         return  datasourceBroker;
     }
 
-    @Bean //this bean help us  to wire up by value
-    public static PropertySourcesPlaceholderConfigurer properties(){
-        PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer = new PropertySourcesPlaceholderConfigurer();
-        return propertySourcesPlaceholderConfigurer;
-    }
+//    @Bean //this bean help us  to wire up by value
+//    public static PropertySourcesPlaceholderConfigurer properties(){
+//        PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer = new PropertySourcesPlaceholderConfigurer();
+//        return propertySourcesPlaceholderConfigurer;
+//    }
 
 }
